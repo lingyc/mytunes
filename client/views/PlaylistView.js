@@ -2,7 +2,7 @@ var PlaylistView = Backbone.View.extend({
 
   initialize: function(param) {
     this.playlistListView = new PlaylistListView(param);
-    this.addPlaylistView = new AddPlaylistView();
+    this.addPlaylistView = new AddPlaylistView(param);
     this.currentPlaylistView = new CurrentPlaylistView();
     this.render();
   },

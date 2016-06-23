@@ -12,6 +12,7 @@ var AddPlaylistView = Backbone.View.extend({
   events: {
     'submit': function(e) {
       e.preventDefault();
+      this.collection.add(new PlaylistModel(e.target.children[0].value));
     }
   },
 
