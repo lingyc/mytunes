@@ -54,8 +54,8 @@ describe('LibraryView', function() {
       view = new FakeLibraryView({ collection: new Songs() });
       expect(view.render).to.have.been.calledOnce;
 
-      requests[0].respond(200, { 'Content-Type': 'application/json' }, fakeResponse);
-      expect(view.render).to.have.been.calledTwice;
+      // requests[0].respond(200, { 'Content-Type': 'application/json' }, fakeResponse);
+      // expect(view.render).to.have.been.calledTwice;
     });
   });
 });
