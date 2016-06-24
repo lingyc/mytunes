@@ -7,8 +7,16 @@ var PlaylistListView = Backbone.View.extend({
     this.collection.on('add', this.render, this);
   },
 
+  events: {
+    'change': function(e) {
+      e.preventDefault();
+      console.log(e.target.value);
+      // this.model(e.title);
+    }
+  },
+
   render: function() {
-    // see http://api.jquery.com/detach/
+    // see http://api.jquery.com/detach/ 
     this.$el.children().detach();
 
     this.$el.append(

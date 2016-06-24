@@ -13,7 +13,11 @@ var CurrentPlaylistView = Backbone.View.extend({
     // see http://api.jquery.com/detach/
     this.$el.children().detach();
 
-    // this.$el.html(this.template(this.model.attributes)).append(
+    if (this.collection.length !== 0) {
+      this.$el.html(this.template(this.collection.at(0).attributes));
+    }
+
+    // this.$el.append(
     //   this.model.attributes.songs.map(function(song) {
     //     return new CurrentPlaylistEntryView({model: song}).render();
     //   })
